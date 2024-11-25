@@ -1,0 +1,32 @@
+name: "Support Request Form"
+description: "Use this form to contact support."
+title: "[Support Request] <Your Subject Here>"
+labels: ["support"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: "Your Name"
+      description: "Enter your full name"
+      placeholder: "John Doe"
+    validations:
+      required: true
+
+  - type: input
+    id: email
+    attributes:
+      label: "Your Email"
+      description: "Enter your email address"
+      placeholder: "you@example.com"
+    validations:
+      required: true
+      pattern: "^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$"
+
+  - type: textarea
+    id: subject
+    attributes:
+      label: "Subject"
+      description: "Briefly describe your issue"
+      placeholder: "Write your subject here"
+    validations:
+      required: true
